@@ -107,6 +107,7 @@
 }
 
 .navegation{
+    margin-bottom: 7px;
     display: flex;    
 }
 
@@ -123,11 +124,9 @@ footer{
     align-items: center;
     flex-direction: column;
     grid-area: footer;
+    padding: 7px;
 }
 
-footer{
-    width: 100%;
-}
 
 .img_footer{
     width: 20px;
@@ -150,6 +149,7 @@ footer{
         "navbar productos"
         "footer productos"
         ;
+        height: auto;
     }
 /* Aqui empieza el navbar */
     .nav{
@@ -181,9 +181,9 @@ footer{
         flex-direction: column;
         padding: 13px;
         list-style-type: none;
-        font-size: 14px;
+        font-size: 18px;
         margin: 7px;
-        gap: 5px;
+        gap: 8px;
     }
     /* Aqui termina el navbar */
 
@@ -205,7 +205,7 @@ footer{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        justify-content: space-around;
+        align-items: center;
     }
 
     
@@ -218,8 +218,8 @@ footer{
     }
 
     .img_card {
-        width: 260px;
-        height: 200px;
+        width: 300px;
+        height: 220px;
     }
 
     .product-details {
