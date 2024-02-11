@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60px 60px 1fr 60px;
+    grid-template-areas: 
+    "navbar"
+    "filter"
+    "productos"
+    "footer"
+    ;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #2F001C;
+    color: white;
+    align-items: center;
+    grid-area: navbar;
+}
+
+.logo_cont {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.logo,
+.bars {
+    width: 30px;
+}
+
+.nav ul{
+    display: none;
+}
+
+.filter {
+    background-color: rgb(215, 215, 253);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    grid-area: filter;
+}
+
+.main_cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: productos;
+}
+
+.container_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #b6b6b6;
+    width: 200px;
+    gap: 15px;
+    padding: 35 px 0px;
+    border-radius: 5px;
+}
+
+.img_card {
+    width: 200px;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+}
+
+.product-price {}
+
+.boton {}
+
+.navegation{
+    display: flex;    
+}
+
+.navegation >button{
+    width: 30px;
+    height: 30px;
+    color: blue;
+}
+
+footer{
+    background-color: #2F001C;
+    color: white;    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-area: footer;
+}
+
+footer{
+    width: 100%;
+}
+
+.img_footer{
+    width: 20px;
+    color: white;    
+    display: flex;
+    align-items: center;
+}
+
+@media(min-width:576px){
+    .container {
+        grid-template-columns: 175px 1fr;
+        grid-template-rows: 45px 1fr 45px;
+        grid-template-areas: 
+        "navbar filter"
+        "navbar productos"
+        "footer productos"
+        ;
+    }
+
+    .nav{
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .logo_cont {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .logo {
+        width: 48px;
+    }
+
+    .bars{
+        display: none;
+    }
+
+    .nav ul{
+        display: block;
+    }
+
+    .container_card {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+  
+
+   
+
+   
+}
