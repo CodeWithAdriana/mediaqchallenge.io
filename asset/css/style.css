@@ -50,6 +50,15 @@
     align-items: center;
     padding: 10px;
     grid-area: filter;
+    gap: 5px;
+}
+
+.filter span{
+    font-size: 18px;
+}
+
+.button-precio{
+    width: 90px;
 }
 
 .main_cont {
@@ -72,14 +81,14 @@
     flex-direction: column;
     align-items: center;
     background-color: #b6b6b6;
-    width: 200px;
+    width: 300px;
     gap: 15px;
     padding: 35 px 0px;
     border-radius: 5px;
 }
 
 .img_card {
-    width: 200px;
+    width: 300px;
 }
 
 .product-details {
@@ -90,9 +99,12 @@
     padding: 15px;
 }
 
-.product-price {}
-
-.boton {}
+.boton {
+    background-color: #FFEE12;
+    width: 90PX;
+    height: 27px;
+    border-radius: 5px;
+}
 
 .navegation{
     display: flex;    
@@ -125,16 +137,21 @@ footer{
 }
 
 @media(min-width:576px){
+    * {
+        margin: 0;
+        padding: 0;
+    }
     .container {
+        background-color: #FFEE12;
         grid-template-columns: 175px 1fr;
-        grid-template-rows: 45px 1fr 45px;
+        grid-template-rows: 50px  1fr 80px;
         grid-template-areas: 
         "navbar filter"
         "navbar productos"
         "footer productos"
         ;
     }
-
+/* Aqui empieza el navbar */
     .nav{
         flex-direction: column;
         justify-content: start;
@@ -144,10 +161,15 @@ footer{
         flex-direction: column;
         gap: 8px;
         align-items: center;
+        background-color: #2F001C;
     }
 
     .logo {
         width: 48px;
+    }
+
+    .logo_cont h1{
+        text-align: center;
     }
 
     .bars{
@@ -155,18 +177,79 @@ footer{
     }
 
     .nav ul{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        padding: 13px;
+        list-style-type: none;
+        font-size: 14px;
+        margin: 7px;
+        gap: 5px;
     }
+    /* Aqui termina el navbar */
 
+/* aqui comienza la section */
+.filter {
+    background-color: rgb(215, 215, 253);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-precio{
+    width: 100%;
+}
+/* aqui termina la section */
+
+/* comienzo de la section que contiene las boxes */
     .container_card {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        justify-content: space-around;
     }
 
-  
+    
+    .boxes {
+        display: flex;
+        flex-direction: column;
+        background-color: #b6b6b6;
+        width: 300px;
+        border-radius: 5px;
+    }
 
-   
+    .img_card {
+        width: 260px;
+        height: 200px;
+    }
 
-   
+    .product-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navegation >button{
+        width: 35px;
+        height: 21px;
+        color: blue;
+    }
+
+    /* Finalizo las boxes */
+
+    footer{
+        background-color: #fb04e6;
+        color: white;    
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    .img_footer{
+        width: 20px;
+        color: white;    
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+    }
 }
